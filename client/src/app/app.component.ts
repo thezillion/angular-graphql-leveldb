@@ -9,7 +9,8 @@ import { GraphQLService } from './services/graph-ql.service';
 })
 export class AppComponent implements OnInit  {
   title = 'Ng GraphQL Example';
-  graphql_returned: string;
+  graphql_returned: object;
+  graphql_returned_str: string;
 
   constructor(
     private graphQLService: GraphQLService
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit  {
     this.graphQLService.loadGraphQLEP()
       .subscribe(res => {
         this.graphql_returned = res;
-        console.log(res);
+        this.graphql_returned_str = JSON.stringify(this.graphql_returned);
       });
   }
 }

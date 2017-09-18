@@ -15,9 +15,9 @@ export class GraphQLService {
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
-    var data = { query: "{ hello }" };
+    var data = { query: '{ bears(key: "steve") { key, type, region { name } } }' };
 
-    return this.http.post('http://localhost:4000/api/graphql', JSON.stringify(data), { headers })
+    return this.http.post('/api/graphql', JSON.stringify(data), { headers })
       .map(res => res.json());
   }
 
