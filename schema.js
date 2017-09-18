@@ -11,29 +11,6 @@ const db = sublevel(level('./db'))
 const bearsdb = db.sublevel('bears')
 const regionsdb = db.sublevel('regions')
 
-// Construct a schema, using GraphQL schema language
-// var schema = buildSchema(`
-//   type Query {
-//     hello: String
-//   }
-//   type Bear {
-//     key: String,
-//     type: String,
-//     region: Region
-//   }
-//   type Region {
-//     key: String,
-//     name: String
-//   }
-// `);
-
-// The root provides a resolver function for each API endpoint
-// var root = {
-//   hello: () => {
-//     return 'Hello world!';
-//   },
-// };
-
 const RegionType = new GraphQLObjectType({
   name: 'Region',
   fields: {
