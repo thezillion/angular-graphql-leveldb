@@ -7,5 +7,24 @@
     "graphql-relay": "^0.5.2",
     "level": "^1.7.0",
     "level-sublevel": "^6.6.1"
-  }
+  },
+  "name": "angular-graphql-leveldb",
+  "description": "This is an implementation of an Angular Service that queries a GraphQL endpoint, that in turn pulls data from a LevelDB instance.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "cd client && npm run build && cd .. && node db.js && node index.js",
+    "installall": "npm install && cd client && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thezillion/angular-graphql-leveldb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thezillion/angular-graphql-leveldb/issues"
+  },
+  "homepage": "https://github.com/thezillion/angular-graphql-leveldb#readme"
 }
